@@ -1,1 +1,1 @@
-# this repository contains completed tasks from Serverless Academy
+# This repository contains completed tasks from Serverless Academy
