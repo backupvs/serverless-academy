@@ -9,10 +9,10 @@ class ShowUniqueValuesCommand extends Command {
   _description = 'Show only unique values (words and numbers)';
 
   /**
-   * Filter only unique words
+   * Filter only unique values
    *
    * @param {any[]} data Array of elements to execute with
-   * @return {string[]} Array of unique words
+   * @return {string[]} Array of unique values
    */
   execute(data) {
     const memo = {};
