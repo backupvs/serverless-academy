@@ -1,4 +1,5 @@
 import App from './App.js';
+import ShowUniqueWordsCommand from './commands/ShowUniqueWordsCommand.js';
 import SortAlphabeticallyCommand from './commands/SortAlphabeticallyCommand.js';
 import SortNumbersAscCommand from './commands/SortNumbersAscCommand.js';
 import SortNumbersDescCommand from './commands/SortNumbersDescCommand.js';
@@ -9,5 +10,6 @@ const app = new App([
   new SortNumbersAscCommand(),
   new SortNumbersDescCommand(),
   new SortWordsByLengthCommand(),
+  new ShowUniqueWordsCommand(),
 ]);
 app.run();
