@@ -112,7 +112,7 @@ class App {
 
     while (true) {
       const answer = await this._readline.question(
-        `Select ( ${minCommandNumber} - ${maxCommandNumber} ) and press ENTER: `
+        `\nSelect ( ${minCommandNumber} - ${maxCommandNumber} ) and press ENTER: `
       );
 
       if (answer.trim().toLowerCase() === this._exitCommandName) return -1;
