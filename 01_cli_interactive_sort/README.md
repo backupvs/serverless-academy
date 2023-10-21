@@ -11,5 +11,5 @@ npm start
 or
 
 ```bash
-node index.js
+node src/index.js
 ```
