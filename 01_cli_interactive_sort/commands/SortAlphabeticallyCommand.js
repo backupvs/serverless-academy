@@ -10,11 +10,12 @@ class SortAlphabeticallyCommand extends Command {
 
   /**
    * Sorts words alphabetically (A-Z)
+   *
    * @param {any[]} data Array of elements to execute with
    * @return {string[]} Array of sorted words
    */
   execute(data) {
-    return data.filter((el) => typeof el === 'string' && isNaN(e)).sort();
+    return data.filter((el) => typeof el === 'string' && isNaN(el)).sort();
   }
 }
 
