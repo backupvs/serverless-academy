@@ -1,5 +1,5 @@
 import Command from './commands/Command.js';
-import readline from 'readline/promises';
+import readline from 'node:readline/promises';
 
 /**
  * @typedef {Object} AppOptions
