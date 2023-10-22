@@ -14,7 +14,7 @@ Here is the list of commands that app support:
 #### Send a message
 
 ```bash
-$ node app.js send-message 'Your message'
+$ node index.js send-message 'Your message'
 ```
 
 The result of executing this command is the appearance of your message in your Telegram bot. After it has been executed, the CLI terminates the process itself to allow you to enter the next command.
@@ -22,7 +22,7 @@ The result of executing this command is the appearance of your message in your T
 #### Send a photo
 
 ```bash
-$ node app.js send-photo '/path/to/the/photo.png'
+$ node index.js send-photo '/path/to/the/photo.png'
 ```
 
 The result of this command is a photo sent to the Telegram bot from your PC. After it has been executed, the CLI terminates the process itself to allow you to enter the next command.
@@ -30,7 +30,7 @@ The result of this command is a photo sent to the Telegram bot from your PC. Aft
 #### Help
 
 ```bash
-$ node app.js --help
+$ node index.js --help
 ```
 
 This command is designed to provide you with information about all the available commands supported by the app.
