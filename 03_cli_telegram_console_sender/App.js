@@ -28,7 +28,7 @@ export default class App {
   _commands;
 
   /**
-   * @param {string} bot The Telegram Bot API token.
+   * @param {string} token The Telegram Bot API token.
    * @param {AppBotCommand[]} commands Array of commands to initialize the application with.
    * @param {AppOptions} options Configuration options for the app.
    */
