@@ -23,6 +23,6 @@ or
 
 ```bash
 
-node src/index.js
+node index.js
 
 ```
