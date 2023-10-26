@@ -5,3 +5,4 @@
 3.  [CLI: Telegram Console Sender](https://github.com/backupvs/serverless-academy/tree/main/03_cli_telegram_console_sender)
 4.  [Telegram Bot: Weather Forecast](https://github.com/backupvs/serverless-academy/tree/main/04_telegram_bot_weather_forecast)
 5.  [Telegram Bot: Exchange Rates](https://github.com/backupvs/serverless-academy/tree/main/05_telegram_bot_exchange_rates)
+6.  [Instagram Giveaway](https://github.com/backupvs/serverless-academy/tree/main/06_instagram_giveaway)
