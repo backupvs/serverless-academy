@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { currencyCodesMap } from '../utils.js';
 import NodeCache from 'node-cache';
-// import mono from '../test/mono.json' assert { type: 'json' };
 
 /**
  * Class for interacting with the Monobank API to fetch exchange rate data.
