@@ -11,24 +11,24 @@ In the original JSON, in a situation where the user has multiple vacation period
 ```json
 [
   {
-    "_id":"6196a33a3a853300128602eb",
-    "user":{
-      "_id":"60b7c1f04df06a0011ef0e76",
-      **"name":"Laurence Knox"**
+    "_id": "6196a33a3a853300128602eb",
+    "user": {
+      "_id": "60b7c1f04df06a0011ef0e76",
+      "name": "Laurence Knox"
     },
-    "usedDays":3,
-    "startDate":"2021-11-19",
-    "endDate":"2021-11-23"
+    "usedDays": 3,
+    "startDate": "2021-11-19",
+    "endDate": "2021-11-23"
   },
   {
-    "_id":"61a3c3bb3a85330012864b5b",
-    "user":{
-      "_id":"60b7c1f04df06a0011ef0e76",
-      **"name":"Laurence Knox"**
+    "_id": "61a3c3bb3a85330012864b5b",
+    "user": {
+      "_id": "60b7c1f04df06a0011ef0e76",
+      "name": "Laurence Knox"
     },
-    "usedDays":2,
-    "startDate":"2021-12-09",
-    "endDate":"2021-12-10"
+    "usedDays": 2,
+    "startDate": "2021-12-09",
+    "endDate": "2021-12-10"
   }
 ]
 ```
