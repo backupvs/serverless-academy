@@ -6,3 +6,4 @@
 4.  [Telegram Bot: Weather Forecast](https://github.com/backupvs/serverless-academy/tree/main/04_telegram_bot_weather_forecast)
 5.  [Telegram Bot: Exchange Rates](https://github.com/backupvs/serverless-academy/tree/main/05_telegram_bot_exchange_rates)
 6.  [Instagram Giveaway](https://github.com/backupvs/serverless-academy/tree/main/06_instagram_giveaway)
+7.  [Grouping Vacations](https://github.com/backupvs/serverless-academy/tree/main/07_grouping_vacations)
