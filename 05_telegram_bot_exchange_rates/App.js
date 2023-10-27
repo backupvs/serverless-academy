@@ -31,7 +31,7 @@ export default class App {
   constructor(token, options = {}) {
     const cache = new NodeCache();
     const monobankAPI = new MonobankAPI(cache);
-    const privatbankAPI = new PrivatBankAPI();
+    const privatbankAPI = new PrivatBankAPI(cache);
     this._bot = new AppBot(token, monobankAPI, privatbankAPI, options.botOptions);
   }
 
