@@ -106,16 +106,4 @@ export default class App {
 
     return resultSet.size;
   }
-
-  // /**
-  //  *
-  //  * @param {Function} func
-  //  * @param  {...any} args
-  //  */
-  // async _logResultAndTimeElapsed(func, arg, ...argArray) {
-  //   const start = performance.now();
-  //   const result = await func.call(this, arg, ...argArray);
-  //   const timeElapsed = `${(performance.now() - start).toFixed(3)}ms`;
-  //   console.log(`${func.name}() result: ${result}. Time elapsed: ${timeElapsed}`);
-  // }
 }
