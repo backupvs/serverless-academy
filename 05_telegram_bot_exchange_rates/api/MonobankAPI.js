@@ -77,6 +77,7 @@ export default class MonobankAPI {
       };
 
       this._cacheStorage.set('lastMonobankResponse', result);
+      return result;
     } catch (err) {
       if (err.response?.status !== axios.HttpStatusCode.TooManyRequests) {
         console.error(err.message);
