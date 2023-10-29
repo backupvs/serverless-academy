@@ -7,3 +7,4 @@
 5.  [Telegram Bot: Exchange Rates](https://github.com/backupvs/serverless-academy/tree/main/05_telegram_bot_exchange_rates)
 6.  [Instagram Giveaway](https://github.com/backupvs/serverless-academy/tree/main/06_instagram_giveaway)
 7.  [Grouping Vacations](https://github.com/backupvs/serverless-academy/tree/main/07_grouping_vacations)
+8.  [JSON Sorting](https://github.com/backupvs/serverless-academy/tree/main/08_json_sorting)
