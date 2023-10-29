@@ -90,7 +90,10 @@ export default class App {
 
     // Check content of each file
     for (let fileContent of fileContents) {
-      fileContent.split('\n').forEach((word) => {
+      // Get unique words from current file
+      const currentUniqueWords = new Set(fileContent.split('\n'));
+
+      currentUniqueWords.forEach((word) => {
         // Init counter if met for the first time
         if (!memo[word]) {
           memo[word] = 1;
