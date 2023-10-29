@@ -47,8 +47,9 @@ export default class App {
 
   async run() {
     for (let url of this._urls) {
-      const { result, success } = await this._fetch(url);
-      this._logResult(url, result, success);
+      const { isDone, success } = await this._fetch(url);
+      if (success) this._summary[isDone]++; // increase summary counter
+      this._logResult(url, isDone, success);
     }
 
     this._logSummary();
@@ -58,19 +59,21 @@ export default class App {
    * Fetches data from given URL with specified maximum number of tries if failed.
    *
    * @param {string} url Url to fetch from.
-   * @returns {Promise<{ result: Object, success: boolean }>} Result object of fetching.
+   * @returns {Promise<{ isDone: boolean, success: boolean }>} Fetching result object.
    */
   async _fetch(url) {
     let tryCount = 0;
     let success = false;
-    let result = null;
+    let isDone = null;
 
     while (!success && tryCount < this._maxTries) {
       try {
         const res = await fetch(url);
+        const resultObj = await res.json();
         success = res.status === 200;
-        result = await res.json();
-        if (success) this._summary[result.isDone]++; // increment summary counters
+        if (success) {
+          isDone = this._findIsDoneValue(resultObj);
+        }
       } catch {
         success = false;
       } finally {
@@ -78,21 +81,52 @@ export default class App {
       }
     }
 
-    return { result, success };
+    return { isDone, success };
+  }
+
+  /**
+   * Traverses an object and finds value of isDone property.
+   *
+   * @param {object} obj The object to traverse.
+   * @returns {boolean | null} isDone value.
+   */
+  _findIsDoneValue(obj) {
+    const stack = [obj];
+
+    while (stack.length > 0) {
+      const current = stack.pop();
+
+      // If found boolean isDone, returns value immediately.
+      if (typeof current.isDone === 'boolean') {
+        return current.isDone;
+      }
+
+      // Iterating through properties and push objects to stack
+      // to traverse them later.
+      Object.keys(current).forEach((key) => {
+        if (typeof current[key] === 'object') {
+          stack.push(current[key]);
+        }
+      });
+    }
+
+    return null;
   }
 
   /**
    * Logs result of fetching from the given URL.
    *
    * @param {string} url Fetched URL.
-   * @param {{ isDone: boolean }} obj Object that was received.
-   * @param {boolean} success Was fetch success or not.
+   * @param {boolean} isDone isDone value.
+   * @param {boolean} success Whether fetch successfull or not.
    */
-  _logResult(url, obj, success) {
+  _logResult(url, isDone, success) {
     const resultStatus = success ? 'Success' : 'Fail';
-    const result = success
-      ? `isDone - ${obj.isDone ? 'True' : 'False'}`
-      : 'The endpoint is unavailable';
+    let result = 'The endpoint is unavailable';
+
+    if (success && typeof isDone === 'boolean') {
+      result = `isDone - ${isDone ? 'True' : 'False'}`;
+    }
     console.log(`[${resultStatus}]: ${url}: ${result}`);
   }
 
