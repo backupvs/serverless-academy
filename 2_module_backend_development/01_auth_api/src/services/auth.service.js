@@ -81,13 +81,13 @@ export default class AuthService {
     const refreshToken = await Jwt.signRefreshToken({
       userId: createdId.id,
     });
-    const accessToken = await Jwt.signAccessToken({ userId: createdId.id });
+    const accessToken = await Jwt.signAccessToken({ userId: createdId });
 
     // Add refresh token to DB with created user ID as payload
-    await this._userRepository.updateRefreshTokenById(createdId.id, refreshToken);
+    await this._userRepository.updateRefreshTokenById(createdId, refreshToken);
 
     return {
-      id: createdId.id,
+      id: createdId,
       refreshToken,
       accessToken,
     };

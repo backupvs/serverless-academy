@@ -12,11 +12,11 @@ export default class MeService {
    * Get data of the current authorized user.
    *
    * @param {string} userId
-   * @returns {{ email: string }}
+   * @returns {Promise<{ email: string }>}
    */
   async getCurrentUserData(userId) {
-    const { email } = await this._userRepository.findById(userId);
+    const userData = await this._userRepository.findById(userId);
 
-    return { email };
+    return { email: userData.email };
   }
 }
