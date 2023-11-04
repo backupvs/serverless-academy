@@ -18,5 +18,6 @@
   
   1.  [Auth API](https://github.com/backupvs/serverless-academy/tree/main/2_module_backend_development/01_auth_api)
   2.  [Country by IP](https://github.com/backupvs/serverless-academy/tree/main/2_module_backend_development/02_country_by_ip)
-  2.  [JSON Storage](https://github.com/backupvs/serverless-academy/tree/main/2_module_backend_development/03_json_storage)
+  3.  [JSON Storage](https://github.com/backupvs/serverless-academy/tree/main/2_module_backend_development/03_json_storage)
+  4.  [Shortlinker API](https://github.com/backupvs/serverless-academy/tree/main/2_module_backend_development/04_shortlinker_api)
 </details>
